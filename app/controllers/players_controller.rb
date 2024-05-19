@@ -10,7 +10,7 @@ class PlayersController < ApplicationController
     render json: {message: "Jello"}
   end
 
-  
+
 
   def update
     @player = Player.find_by(id: params[:id])
@@ -21,6 +21,22 @@ class PlayersController < ApplicationController
       dob: params[:dob] || @player.dob,
     )
     render json: {message: "Zello"}
+  end
+
+  def create
+    @player = Player.create(
+      name: params[:name],
+      position: params[:position],
+      nationality: params[:nationality],
+      dob: params[:dob],
+    )
+    render json: {message: "Yello"}
+  end
+
+  def destroy
+    @player = Player.find_by(id: params[:id])
+    @player.destroy
+    render json: { message: "Player destroyed successfully" }
   end
 
 
