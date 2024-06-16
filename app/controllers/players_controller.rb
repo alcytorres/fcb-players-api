@@ -2,15 +2,13 @@ class PlayersController < ApplicationController
 
   def index
     @players = Player.all
-    render json: {message: "Hello"}
+    render :index
   end
 
   def show
-    @players = Player.find_by(id: params[:id])
-    render json: {message: "Jello"}
+    @player = Player.find_by(id: params[:id])
+    render :show
   end
-
-
 
   def update
     @player = Player.find_by(id: params[:id])
@@ -20,7 +18,7 @@ class PlayersController < ApplicationController
       nationality: params[:nationality] || @player.nationality,
       dob: params[:dob] || @player.dob,
     )
-    render json: {message: "Zello"}
+    render :show
   end
 
   def create
@@ -30,7 +28,7 @@ class PlayersController < ApplicationController
       nationality: params[:nationality],
       dob: params[:dob],
     )
-    render json: {message: "Yello"}
+    render :show
   end
 
   def destroy
