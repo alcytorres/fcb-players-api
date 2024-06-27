@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Initially this API was made as CRUD practice of buidling a backend and frontend at the same time
+Here is the link to the frontend: https://github.com/alcytorres/fcb-players-frontend
 
-Things you may want to cover:
 
-* Ruby version
+NOTE this API is also being used for the fcb-players-vue-frontend app: https://github.com/alcytorres/fcb-players-vue-frontend
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
